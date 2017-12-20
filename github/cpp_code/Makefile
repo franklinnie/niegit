@@ -10,6 +10,8 @@ SRCS=subSrc/githubAllocBufs.cpp subSrc/strongLinkTest.cpp \
 	subSrc/platform_device.cpp \
 	subSrc/mmap.cpp	\
 	subSrc/kmem_cache.cpp	\
+	subSrc/boostTest.cpp	\
+	subSrc/blog.cpp	\
 	main/test.cpp 
   
 OBJS = $(SRCS:.cpp=.o)  

@@ -15,7 +15,8 @@ s_test_case_func test_case_funcTbl[] =
 	{"device_create",	device_create},	  	/* 2 */	
 	{"platform_device",	platform_device},  	/* 3 */	
 	{"mmap_user",		mmap_user},		/* 4 */
-	{"kmem_cache",   kmem_cache}	/* 5 */
+	{"kmem_cache",   kmem_cache},	/* 5 */
+	{"blog",	blog}	/* 6 */ 
 };	
 
 void* thread_entry(void *data);

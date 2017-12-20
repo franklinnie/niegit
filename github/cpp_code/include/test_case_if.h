@@ -19,6 +19,7 @@ extern github_err_t device_create(uint32_t num, void *userData);
 extern github_err_t platform_device(uint32_t num, void *userData);
 extern github_err_t mmap_user(uint32_t num, void *userData);
 extern github_err_t kmem_cache(uint32_t num, void *userData); 
+extern github_err_t blog(uint32_t num, void *userData);
 
 #endif
 
