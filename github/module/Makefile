@@ -1,0 +1,14 @@
+obj-m += kmem_cache_create.o  
+CURRENT_PATH := $(shell pwd)  
+LINUX_KERNEL := $(shell uname -r)  
+LINUX_KERNEL_PATH := /usr/src/linux-headers-$(LINUX_KERNEL)  
+CONFIG_MODULE_SIG=n
+
+all:  
+	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) modules  
+clean:  
+	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) clean  
+install:  
+	insmod mmap.ko  
+uninstall:  
+	rmmod mmap
