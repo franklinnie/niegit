@@ -19,7 +19,8 @@ s_test_case_func test_case_funcTbl[] =
 	{"blog",		blog},			/* 6 */ 
 	{"builderClient", 	builderClient},		/* 7 */
 	{"duty"		,	duty},			/* 8 */	
-	{"state"	,	state}			/* 9 */
+	{"state"	,	state},			/* 9 */
+	{"Strategy",		Strategy}		/* 10*/
 };	
 
 void* thread_entry(void *data);

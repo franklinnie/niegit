@@ -25,6 +25,11 @@ SRCS=subSrc/githubAllocBufs.cpp subSrc/strongLinkTest.cpp \
 	subSrc/state/OpenningState.cpp	\
 	subSrc/state/StoppingState.cpp	\
 	subSrc/state/Context.cpp	\
+	subSrc/strategy/Context.cpp	\
+	subSrc/strategy/BackDoor.cpp	\
+	subSrc/strategy/BlockEnemy.cpp	\
+	subSrc/strategy/GivenGreenList.cpp	\
+	subSrc/strategy/Strategy.cpp	\
 	main/test.cpp 
   
 OBJS = $(SRCS:.cpp=.o)  
