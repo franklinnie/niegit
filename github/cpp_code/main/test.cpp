@@ -25,7 +25,8 @@ s_test_case_func test_case_funcTbl[] =
 	{"stlReverse",		stlReverse},		/* 12*/
 	{"stlVector",		stlVector},		/* 13*/
 	{"stlVectorMultiArray",	stlVectorMultiArray},	/* 14*/
-	{"stlMultimap", 	stlMultimap}		/* 15*/
+	{"stlMultimap", 	stlMultimap},		/* 15*/
+	{"stlStringConw",	stlStringConw}		/* 16*/
 };	
 
 void* thread_entry(void *data);
