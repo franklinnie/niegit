@@ -17,7 +17,9 @@ s_test_case_func test_case_funcTbl[] =
 	{"mmap_user",		mmap_user},		/* 4 */
 	{"kmem_cache",   	kmem_cache},		/* 5 */
 	{"blog",		blog},			/* 6 */ 
-	{"builderClient", 	builderClient}		/* 7 */
+	{"builderClient", 	builderClient},		/* 7 */
+	{"duty"		,	duty},			/* 8 */	
+	{"state"	,	state}			/* 9 */
 };	
 
 void* thread_entry(void *data);

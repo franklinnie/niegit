@@ -1,8 +1,0 @@
-ssh-keygen -t rsa -C "m18642695686_1@163.com"
-
-$ git config --global user.name "franglinnie"
-$ git config --global user.email m18642695686_1@163.com
-$ git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 
-
- franklinnie/niegit
- git remote add origin git://github.com/franklinnie/niegit.git

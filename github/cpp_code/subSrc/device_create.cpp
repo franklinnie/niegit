@@ -14,7 +14,7 @@
 github_err_t device_create(uint32_t num, void *userData) 
 {  
     char outbuf[512];  
-    char * myname = "tishion";  
+    const char * myname = "tishion";  
     lang_t langtype = english;  
     int fd = open("/dev/device_create", O_RDWR, S_IRUSR|S_IWUSR);  
     while(1) {

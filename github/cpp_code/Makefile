@@ -15,6 +15,16 @@ SRCS=subSrc/githubAllocBufs.cpp subSrc/strongLinkTest.cpp \
 	subSrc/builder/Builder.cpp	\
 	subSrc/builder/Director.cpp	\
 	subSrc/builder/Client.cpp	\
+	subSrc/duty/duty.cpp	\
+	subSrc/state/State.cpp	\
+	subSrc/state/lift.cpp	\
+	subSrc/state/ClosingState.cpp	\
+	subSrc/state/liftState.cpp	\
+	subSrc/state/RunningState.cpp	\
+	subSrc/state/StoppingState.cpp	\
+	subSrc/state/OpenningState.cpp	\
+	subSrc/state/StoppingState.cpp	\
+	subSrc/state/Context.cpp	\
 	main/test.cpp 
   
 OBJS = $(SRCS:.cpp=.o)  

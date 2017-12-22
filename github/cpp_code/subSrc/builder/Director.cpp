@@ -23,3 +23,12 @@ void Director::construct()
 	curBuilder->buildPartB(2);
 	curBuilder->buildPartC(3);
 }
+
+
+
+
+
+
+
+
+
