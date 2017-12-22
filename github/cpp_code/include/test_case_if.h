@@ -27,6 +27,8 @@ extern github_err_t Strategy(uint32_t num, void *userData);
 extern github_err_t singletonClient(uint32_t num, void *userData);
 extern github_err_t stlVector(uint32_t num, void *userData);
 extern github_err_t stlReverse(uint32_t num, void *userData);
+extern github_err_t stlVectorMultiArray(uint32_t num, void *userData);
+extern github_err_t stlMultimap(uint32_t num, void *userData);
 
 #endif
 

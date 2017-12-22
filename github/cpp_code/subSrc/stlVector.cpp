@@ -34,5 +34,21 @@ github_err_t stlVector(uint32_t num, void *userData)
 	return GITHUB_ERR_NONE;
 }
 
+github_err_t stlVectorMultiArray(uint32_t num, void *userData)
+{
+   vector< vector< vector<int> > > vI3Matrix(2, vector< vector<int> > (3, vector<int>(4,0)) );
+
+   for(int kk=0; kk<4; kk++)
+   {
+      for(int jj=0; jj<3; jj++)
+      {
+         for(int ii=0; ii<2; ii++)
+         {
+            cout << vI3Matrix[ii][jj][kk] << endl;
+         }
+      }
+   }
+   return GITHUB_ERR_NONE;	
+}
 
 

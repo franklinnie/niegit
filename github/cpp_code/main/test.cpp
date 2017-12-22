@@ -23,7 +23,9 @@ s_test_case_func test_case_funcTbl[] =
 	{"Strategy",		Strategy},		/* 10*/
 	{"singletonClient",	singletonClient},	/* 11*/
 	{"stlReverse",		stlReverse},		/* 12*/
-	{"stlVector",		stlVector}		/* 13*/
+	{"stlVector",		stlVector},		/* 13*/
+	{"stlVectorMultiArray",	stlVectorMultiArray},	/* 14*/
+	{"stlMultimap", 	stlMultimap}		/* 15*/
 };	
 
 void* thread_entry(void *data);
