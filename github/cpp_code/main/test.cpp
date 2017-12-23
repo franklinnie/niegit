@@ -20,7 +20,10 @@ s_test_case_func test_case_funcTbl[] =
 	{"builderClient", 	builderClient},		/* 7 */
 	{"duty"		,	duty},			/* 8 */	
 	{"state"	,	state},			/* 9 */
-	{"Strategy",		Strategy}		/* 10*/
+	{"Strategy",		Strategy},		/* 10*/
+	{"singletonClient",	singletonClient},	/* 11*/
+	{"stlReverse",		stlReverse},		/* 12*/
+	{"stlVector",		stlVector}		/* 13*/
 };	
 
 void* thread_entry(void *data);

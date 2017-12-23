@@ -24,6 +24,9 @@ extern github_err_t builderClient(uint32_t num, void *userData);
 extern github_err_t duty(uint32_t num, void *userData);
 extern github_err_t state(uint32_t num, void *userData);
 extern github_err_t Strategy(uint32_t num, void *userData); 
+extern github_err_t singletonClient(uint32_t num, void *userData);
+extern github_err_t stlVector(uint32_t num, void *userData);
+extern github_err_t stlReverse(uint32_t num, void *userData);
 
 #endif
 
