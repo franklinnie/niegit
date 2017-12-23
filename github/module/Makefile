@@ -1,4 +1,4 @@
-obj-m += kmem_cache_create.o  
+obj-m += list_head.o  
 CURRENT_PATH := $(shell pwd)  
 LINUX_KERNEL := $(shell uname -r)  
 LINUX_KERNEL_PATH := /usr/src/linux-headers-$(LINUX_KERNEL)  
@@ -9,6 +9,6 @@ all:
 clean:  
 	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) clean  
 install:  
-	insmod mmap.ko  
+	insmod alloc_pages.ko  
 uninstall:  
-	rmmod mmap
+	rmmod alloc_pages.ko
