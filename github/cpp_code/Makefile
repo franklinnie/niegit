@@ -37,6 +37,7 @@ SRCS=subSrc/githubAllocBufs.cpp subSrc/strongLinkTest.cpp \
 	subSrc/stlMultimap.cpp	\
 	subSrc/stlStringConw.cpp	\
 	subSrc/stlListInit.cpp	\
+	subSrc/bitAnd.cpp	\
 	main/test.cpp 
   
 OBJS = $(SRCS:.cpp=.o)  
