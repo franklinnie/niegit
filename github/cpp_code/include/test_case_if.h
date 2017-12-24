@@ -32,8 +32,8 @@ extern github_err_t stlMultimap(uint32_t num, void *userData);
 extern github_err_t stlStringConw(uint32_t num, void *userData); 
 extern github_err_t stlListInit(uint32_t num, void *userData); 
 extern github_err_t bitAnd(uint32_t num, void *userData); 
-
-
+extern github_err_t bitCircleShift(uint32_t num, void *userData); 
+extern github_err_t bitFileld(uint32_t num, void *userData);
 #endif
 
 

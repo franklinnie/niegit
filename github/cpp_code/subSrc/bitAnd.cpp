@@ -51,3 +51,18 @@ a>>i&1 is 0
 
 */
 
+github_err_t bitCircleShift(uint32_t num, void *userData) 
+{
+	int a = 0x12345678;
+	for(int k = 0; k < sizeof(a)*8; k++) {
+		//a=a<<k|(a>>(sizeof(a)*8-k));
+		//a = a<<k|a>>32-k; 
+		a = (a << k)|k;
+		cout << "a is " << hex << a << endl;
+	}
+	return GITHUB_ERR_NONE;
+}
+
+
+
+

@@ -28,7 +28,9 @@ s_test_case_func test_case_funcTbl[] =
 	{"stlMultimap", 	stlMultimap},		/* 15*/
 	{"stlStringConw",	stlStringConw},		/* 16*/
 	{"stlListInit",		stlListInit},		/* 17*/
-	{"bitAnd",		bitAnd}			/* 18*/
+	{"bitAnd",		bitAnd},		/* 18*/
+	{"bitCircleShift",	bitCircleShift},	/* 19*/
+	{"bitFileld",		bitFileld}		/* 20*/ 
 };	
 
 void* thread_entry(void *data);
