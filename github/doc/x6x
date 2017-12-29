@@ -1,0 +1,69 @@
+*****************************H264部分说明********************************
+1.raw H264文件：
+h264的功能分为两层，视频编码层（VCL）和网络提取层（NAL）
+VCL数据即被压缩编码后的视频数据序列。在VCL数据要封装到NAL单元中之后，才可以用来传输或存储。NAL单元（RAW文件）格式如下图：
+
+|Nal头 | RBSP | Nal头 | RBSP| Nal头| RBSP|......|
+
+H264码流打包分析,三种类型
+
+1).SODB　数据比特串－－＞最原始的编码数据
+
+2).RBSP　原始字节序列载荷－－＞在SODB的后面填加了结尾比特（RBSP trailing bits　一个bit“1”）若干比特“0”,以便字节对齐。
+
+3).EBSP　扩展字节序列载荷-- >在RBSP基础上填加了仿校验字节（0X03）它的原因是：
+在NALU加到Annexb上时，需要填加每组NALU之前的开始码 StartCodePrefix,如果该NALU对应的slice为一帧的开始则用4位字节表示，ox00000001,否则用3位字节表示 ox000001.为了使NALU主体中不包括与开始码相冲突的，在编码时，每遇到两个字节连续为0，就插入一个字节的0x03。解码时将0x03去掉。 也称为脱壳操作。
+
+其中RBSP(Raw Byte Sequence Payload)
+
+一个frame是可以分割成多个Slice来编码的，而一个Slice编码之后被打包进一个NAL单元，不过NAL单元除了容纳Slice编码的码流外，还可以容纳其他数据，比如序列参数集SPS
+如果不采用DP（数据分割）机制，则一个片就是一个NALU，一个 NALU 也就是一个片。
+
+
+NAL的语法中没有给出长度信息，实际的传输、存储系统需要增加额外的头实现各个NAL单元的定界。
+NA以00 00 00 01开头,然后是一个字节的头，值是下面中的一个
+0x67: SPS 
+0x68: PPS 
+0x65: IDR   
+0x61: non-IDR Slice
+0x01: B Slice
+0x06: SEI
+0x09: AU Delimiter
+
+2.工具使用
+可以使用工具ffmpeg生成raw h264文件
+ffmpeg -i sdl.mp4 -c:v copy -bsf:v h264_mp4toannexb -an sdl.h264
+
+用ffprobe查看文件格式
+ffprobe -show_format sdl.h264 
+
+264裸码流文件一般播放器不一定能播放，推荐使用ffmpeg的ffplay播放，或用ffmpeg转成通用文件格式播放。
+
+
+3.H264 over RTP类型
+H264 over RTP基本上分三种类型：
+1. Single NAL unit packet 也就是实际的NAL类型，可以理解为一个包就是一帧H264数据，这个在实际中是比较多的。
+2. Aggregation packet 一包数据中含有多个H264帧。还可以细分，下面讲。
+3. Fragmentation unit  一帧数据被分为多个RTP包，这也是很常见的，特别是对于关键帧。
+
+4.H264 over RTP文件
+1）使用wireshark抓包暂时没有成功
+2）使用小程序dump出的文件
+./send_h264file_rtp record.h264 127.0.0.1 1234  //得到的file_rtp.h264即为rtp封装的H264文件
+另外一个小程序
+./rtpencoder test.264 127.0.0.1 5004 //得到的file_rtp_2.h264即为rtp封装的H264文件
+
+
+5.H264参考链接
+https://www.rfc-editor.org/rfc/rfc3984.txt
+http://blog.csdn.net/smilestone_322/article/details/17892967
+https://www.cnblogs.com/jingzhishen/p/3965868.html
+https://www.cnblogs.com/Jade2009/p/5654650.html
+https://www.cnblogs.com/lidabo/p/3758465.html
+
+
+
+
+
+
+
