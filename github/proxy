@@ -1,0 +1,11 @@
+systemProp.http.proxyPort=80
+systemProp.http.proxyUser=
+systemProp.http.proxyPassword=
+org.gradle.jvmargs=-Xmx1536m
+systemProp.https.proxyPassword=
+systemProp.https.proxyHost=
+systemProp.http.nonProxyHosts=
+systemProp.http.proxyHost=
+systemProp.https.proxyPort=80
+systemProp.https.nonProxyHosts=
+systemProp.https.proxyUser=
