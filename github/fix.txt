@@ -1,0 +1,23 @@
+    
+build.gradle
+buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        /*
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFile = file("$project.buildDir/apk/RPCBuilder.apk")
+            }
+        }
+        */
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName  = "./RPCBuilder.apk"
+            }
+        }
+
+settings.gradle
+include ':app', ':sdl_android'
+//project (":sdl_android").projectDir = new File("/Users/austinkirk/AndroidStudioProjects/AustinApp/sdl_android")
