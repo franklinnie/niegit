@@ -8,5 +8,5 @@
   can
 4.sdl frameWork
 5.androidAuto frameWork
-
+6.japanese, english
   
