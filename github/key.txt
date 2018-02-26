@@ -13,3 +13,5 @@
 8.how to describe a frameWork simply
 9.device driver
 10.some books to be read
+11.android app of media series,such as rtp
+12.android frameWork of media series, such as rtp
