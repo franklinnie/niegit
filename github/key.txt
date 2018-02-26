@@ -9,4 +9,5 @@
 4.sdl frameWork
 5.androidAuto frameWork
 6.japanese, english
-  
+7.applying of design mode in hal and frameWork
+8.how to describe a frameWork simply
