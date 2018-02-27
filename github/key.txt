@@ -15,3 +15,6 @@
 10.some books to be read
 11.android app of media series,such as rtp
 12.android frameWork of media series, such as rtp
+13.prepare some documents in terms of linux memory subject and filesystem subject,key point is how to describe some 
+  principles simply
+
